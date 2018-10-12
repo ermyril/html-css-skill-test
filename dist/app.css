@@ -495,7 +495,7 @@ body {
 
 @media (min-width: 480px) {
   .tile {
-    width: calc(100% / 3 - 14px);
+    width: calc(100vw / 3 - 14px);
     min-width: 150px;
     min-height: 150px;
   }
@@ -580,7 +580,7 @@ body {
 
 @media (min-width: 480px) {
   .tile--type_square {
-    width: calc(100% / 3 * 2 - 14px);
+    width: calc(100vw / 3 * 2 - 14px);
     height: calc(100vw / 3 * 2 - 14px);
   }
 }
