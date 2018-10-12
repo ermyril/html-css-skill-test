@@ -1,0 +1,5 @@
+@mixin colors($values...) {    
+    @each $var in $values {
+        padding: #{$var};
+    }
+}

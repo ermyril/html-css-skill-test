@@ -1,0 +1,122 @@
+
+.tile{
+	width: calc(100vw / 2 - 4px);
+	// height: calc(100vw / 2 - 5px);
+	min-width: 155px;
+	height: 155px;
+	min-height: 155px;
+	overflow: hidden;
+	background-color: $light-grey;
+	margin-bottom: 10px;
+	font-size: $fs-small;
+	box-sizing: border-box;
+	padding: 15px;
+	display: flex;
+	position: relative;
+
+	@media (min-width: 480px) {
+	    width: calc(100vw / 3 - 14px);
+		min-width: 150px;
+		min-height: 150px;
+	}
+
+	&__title{
+		align-self: flex-end;
+		z-index: 2;
+	    transition: 400ms all cubic-bezier(0.0, 0.3, 0.58, 1.0);
+	}
+
+	&__img{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-width: 100%;
+	    height: 100%;
+	    z-index: 1;
+	    transition: 400ms all cubic-bezier(0.0, 0.3, 0.58, 1.0);
+	}
+
+	&__image-link:hover{
+		.tile__img{
+			filter: blur(10px);
+		}
+		.tile__warning-button{
+			opacity: 1;
+		}
+	}
+	&__image-link:hover + .tile__title{
+		opacity: 0;
+	}
+
+	&__warning-button{
+		width: 60px;
+	    height: 60px;
+	    background-color: #fff;
+	    position: absolute;
+	    top: calc(50% - 30px);
+	    left: calc(50% - 30px);
+	    z-index: 3;
+	    border-radius: 50%;
+	    color: #f00;
+	    font-size: 20px;
+	    display: block;
+	    transition: 400ms all cubic-bezier(0.0, 0.3, 0.58, 1.0);
+	    opacity: 0;
+	}
+	&__warning-button:after{
+	    content: '!';
+	    font-style: normal;
+	    font-size: 36px;
+	    line-height: 60px;
+	    text-align: center;
+	    width: 100%;
+	    position: absolute;
+	}
+
+
+	&--type_wide{
+		width: 100%;
+
+		@media (min-width: 480px) {
+		    width: calc(100vw / 3 * 2 - 14px);
+		}
+	}
+	&--type_square{
+		width: calc(100vw / 3 * 2 - 14px);
+		height: calc(100vw / 3 * 2);
+		min-width: 200px;
+		min-height: 200px;
+		overflow-y: auto;
+		@media (min-width: 480px) {
+			width: calc(100vw / 3 * 2 - 14px);
+			height: calc(100vw / 3 * 2 - 14px);
+		}
+	}
+	&--type_small-square{
+		width: calc(100vw / 3 - 4px);
+		height: calc(100vw / 3 - 4px);
+		min-width: 100px;
+		min-height: 100px;
+		@media (min-width: 480px) {
+			width: calc(100vw / 3 - 14px);
+			height: calc(100vw / 3 - 14px);
+		}
+	}
+
+	&--hidden-on-mobile{
+		@media (max-width: 479px) {
+			display: none;
+		}
+	}
+
+	&--text-color_white{
+		color: #fff;
+	}
+
+    @each $key, $colour in $colours-map {
+      &--color_#{$key} {
+        background-color: $colour;
+      }
+    }
+}
+
