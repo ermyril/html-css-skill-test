@@ -1,8 +1,11 @@
-.header{
-	background-color: $grey;
-	height: 90px;
-	text-align: center;
-	font-size: $fs-big;
-	line-height: 90px;
-	margin-bottom: 10px;
+.header {
+    font-size: $fs-big;
+    line-height: 90px;
+
+    height: 90px;
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    background-color: $grey;
 }

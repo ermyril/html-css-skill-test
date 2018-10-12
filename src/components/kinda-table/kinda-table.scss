@@ -1,13 +1,42 @@
 
-.kinda-table{
-	width: 100%;
-	display: block;
-}
+.kinda-table {
+    width: 100%;
+    margin: 0;
+    // display: block;
+    padding: 0;
 
-.kinda-table__row{
-	// display: flex;
-}
+    list-style-type: none;
 
-.kinda-table__column{
-	
+    &__row {
+        position: relative;
+
+        margin-bottom: 45px;
+        padding: 0;
+        // display: flex;
+
+        border-bottom: 1px dotted #c2c2c2;
+    }
+
+    &__column {
+        bottom: -5px;
+
+        margin: 0;
+
+        background-color: $green;
+
+        &--left {
+            position: relative;
+
+            margin-right: 7em;
+            padding-right: 2px;
+        }
+        &--right {
+            position: absolute;
+            right: 0;
+
+            padding-left: 2px;
+
+            text-align: right;
+        }
+    }
 }

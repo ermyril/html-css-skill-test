@@ -1,12 +1,12 @@
-.flex-grid__item{
-	&--layout{
-		@media (min-width: 480px) {
-			$new-order: 3, 4, 6, 5, 7, 1, 2, 8, 9, 11, 13, 14, 10, 12;
-			@for $i from 1 through length($new-order){
-				&:nth-of-type(#{$i}){
-					order: nth($new-order, $i);
-				}
-			}
-		}
-	}
+.flex-grid__item {
+    &--layout {
+        @media (min-width: 480px) {
+            $new-order: 3, 4, 6, 5, 7, 1, 2, 8, 9, 11, 13, 14, 10, 12;
+            @for $i from 1 through length($new-order) {
+                &:nth-of-type(#{$i}) {
+                    order: nth($new-order, $i);
+                }
+            }
+        }
+    }
 }

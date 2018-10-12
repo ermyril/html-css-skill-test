@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="flex-grid__item tile tile--color_green tile--type_small-square tile--hidden-on-mobile tile--text-color_white">
-				<a class="tile__image-link" href="javascript:void(0);">
+				<a class="tile__image-link js-toggle-chat" href="javascript:void(0)">
 					<img class="tile__img" src="ship.png">
 					<i class="tile__warning-button"></i>
 				</a>
@@ -68,19 +68,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-grid__item flex-grid__item--layout tile tile--color_green tile--type_square tile--hidden-on-mobile">
-			<div class="kinda-table">
-				<div class="kinda-table__row">
-					<div class="kinda-table__column">Фамилия</div>
-					<div class="kinda-table__column"></div>
-					<div class="kinda-table__column">Мамай</div>
-				</div>
-				<div class="kinda-table__row">
-					<div class="kinda-table__column">Фамилия</div>
-					<div class="kinda-table__column"></div>
-					<div class="kinda-table__column">Мамай</div>
-				</div>
-			</div>
+		<div style="flex-wrap: wrap;" class="flex-grid__item flex-grid__item--layout tile tile--color_green tile--type_square tile--hidden-on-mobile">
+			<ul class="kinda-table">
+			    <li class="kinda-table__row">
+			        <span class="kinda-table__column kinda-table__column--left">Фамилия</span>
+			        <span class="kinda-table__column kinda-table__column--right">Мамай</span>
+			    </li>
+			    <li class="kinda-table__row">
+			        <span class="kinda-table__column kinda-table__column--left">Имя и отчество</span>
+			        <span class="kinda-table__column kinda-table__column--right">Станиславаленина Владимировна</span>
+			    </li>
+			    <li class="kinda-table__row">
+			        <span class="kinda-table__column kinda-table__column--left">Номер полиса выдан заведомо<br> ложный</span>
+			        <span class="kinda-table__column kinda-table__column--right">01354879</span>
+			    </li>
+			    <li class="kinda-table__row">
+			        <span class="kinda-table__column kinda-table__column--left">Дата рождения</span>
+			        <span class="kinda-table__column kinda-table__column--right">01.12.1976</span>
+			    </li>
+			    <li class="kinda-table__row">
+			        <span class="kinda-table__column kinda-table__column--left">Телефон</span>
+			        <span class="kinda-table__column kinda-table__column--right">+79254218069</span>
+			    </li>
+			</ul>
 		</div>
 		<div class="flex-grid__item flex-grid__item--layout tile tile--color_peach tile--type_wide">
 			<div class="tile__title">
@@ -110,6 +120,11 @@
 	</div>
 
 	<footer class="footer">footer</footer>
+
+	<div id="chat" class="chat">
+		<div class="chat__close-button js-toggle-chat"></div>
+		<iframe class="chat__iframe" src="http://localhost:3000"></iframe>
+	</div>
 
 	<script type="text/javascript" src="dist/app.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
