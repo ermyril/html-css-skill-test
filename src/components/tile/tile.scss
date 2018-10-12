@@ -8,7 +8,7 @@
     overflow: hidden;
 
     box-sizing: border-box;
-    width: calc(100vw / 2 - 4px);
+    width: calc(100% / 2 - 4px);
     // height: calc(100vw / 2 - 5px);
     min-width: 155px;
     height: 155px;
@@ -19,7 +19,7 @@
     background-color: $light-grey;
 
     @media (min-width: 480px) {
-        width: calc(100vw / 3 - 14px);
+        width: calc(100% / 3 - 14px);
         min-width: 150px;
         min-height: 150px;
     }
@@ -100,12 +100,12 @@
     &--type_square {
         overflow-y: auto;
 
-        width: calc(100vw / 3 * 2 - 14px);
+        width: calc(100% / 3 * 2 - 14px);
         min-width: 200px;
         height: calc(100vw / 3 * 2);
         min-height: 200px;
         @media (min-width: 480px) {
-            width: calc(100vw / 3 * 2 - 14px);
+            width: calc(100% / 3 * 2 - 14px);
             height: calc(100vw / 3 * 2 - 14px);
         }
     }
