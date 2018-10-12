@@ -1,5 +1,13 @@
 html,
 body {
     font-family: $font-family;
+
     min-width: 320px;
+}
+
+.ms-flex-fix {
+	box-flex: 1;
+	-ms-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
 }
