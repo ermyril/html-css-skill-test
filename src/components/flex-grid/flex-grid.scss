@@ -5,6 +5,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    min-height: calc(100vh - 190px);
+
     @media (min-width: 479px) {
         justify-content: space-evenly;
         // margin: 0 10px;
